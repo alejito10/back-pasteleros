@@ -1,0 +1,37 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "maleteo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js  --unhandled-rejections=strict"
+  },
+  "author": "alejandro",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.22.0",
+    "connect-multiparty": "^2.2.0",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "fs-extra": "^9.0.1",
+    "http-errors": "^1.7.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.18",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0",
+    "socket.io": "^2.3.0",
+    "streamifier": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
