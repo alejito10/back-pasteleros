@@ -13,13 +13,7 @@ const UserSchema = new mongoose.Schema(
 );
 
 UserSchema.pre('save', async function (next) {
-    try {  //falta validar la fecha
-        //this.password = await bcrypt.hash(this.password, 12);
-       /* this.validate().catch(error => {
-            assert.ok(error);
-            assert.equal(error.errors['name'].message, 'nombre requerido');
-            assert.equal(error.errors['email'].message, 'Email validation failed');
-          });*/
+    try {  
           console.log('paso por el presave');
         next();
     } catch (err) {
