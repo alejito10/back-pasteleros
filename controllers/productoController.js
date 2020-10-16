@@ -13,5 +13,5 @@ const newProducto = async (req, res) =>{
 };
 
 module.exports = {
-    newProducto,
+    newProducto
 };

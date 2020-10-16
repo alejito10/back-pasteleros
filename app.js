@@ -37,5 +37,7 @@ app.use(function(err, req, res, next) {
     console.log(err);
     res.sendStatus(err.status || 500);
 });
+
+
 //Exportar
 module.exports = app;
