@@ -9,8 +9,11 @@ router.route('/new')
 
 router.route('/')
     .get(productosController.findOneProducto)
-    .get(productoController.findAllProductos);
+    .get(productoController.findAllProductos)
+    .put(productosController.updateOneProducto)
+    .delete(productosController.deleteOneProducto);
     
+
 router.route("/todos")
     .get(productoController.findAllProductos);
 
