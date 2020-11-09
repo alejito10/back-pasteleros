@@ -16,6 +16,7 @@ var app = express();
 //Rutas cargadas
 const userRoutes = require('./routes/users');
 const productosRoutes = require('./routes/productosRoutes');
+const contactosRoutes = require('./routes/contactosRoutes');
 
 //mideleware
 app.use(logger('dev'));
@@ -27,6 +28,7 @@ app.use(mongoMiddlewares);      //conexion a Mongo
 //Rutas
 app.use('/', userRoutes);
 app.use('/productos', productosRoutes);
+app.use('/contactos', contactosRoutes);
 
 
 app.use(function(err, req, res, next) {
