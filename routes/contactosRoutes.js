@@ -12,16 +12,22 @@ router.post('/send-email',(req,res)=>{
 			port: 465,
 			secure: true,
 			auth: {
-				user: "pasteleros.pruebas2020@gmail.com",
-				pass: "Aa159753",
+				user: process.env.USER_EMAIL,
+				pass: process.env.PASS_EMAIL,
 			},
 		});
     const mailOptions = {
 			from: "pasteleros.pruebas2020@gmail.com",
-			to: "nataliiaa.87@gmail.com",
+			to: "pasteleros.pruebas2020@gmail.com",
 			subject: "prueba de envio",
-			text: req.body.message,
-			html: `<h1>holaa cara colaa</h1>`,
+			text: data.message,
+			html: `<h1>Datos del contacto</h1>
+			<ul>
+				<li>${data.name}</li>
+				<li>${data.email}</li>
+				<li>${data.message}</li>
+			</ul>
+			`,
 		};
     transporter.sendMail(mailOptions, (error, info) => {
 			if (error) {
